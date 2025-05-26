@@ -2,6 +2,10 @@
 
 A comprehensive sports facility management system built with React and TypeScript. Designed to streamline the booking process for sports venues, enabling users to discover and reserve facilities efficiently.
 
+## Demo
+
+Watch the demo video: [Sportomic Slot Booking System Demo](https://www.loom.com/share/f95c37a5d4dc4be2969a8ab4a68d63de?sid=8fbb73da-ddcb-4538-84fd-700a4bf9f6ee)
+
 ## Key Features
 
 - **Smart Venue Discovery**: Browse and filter venues by location, sport type and available amenities
