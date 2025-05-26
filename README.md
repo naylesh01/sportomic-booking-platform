@@ -1,15 +1,14 @@
-
 # Sportomic Slot Booking System
 
 A comprehensive sports facility management system built with React and TypeScript. Designed to streamline the booking process for sports venues, enabling users to discover and reserve facilities efficiently.
 
 ## Key Features
 
-- **Smart Venue Discovery**: Browse and filter venues by location, sport type, and available amenities
+- **Smart Venue Discovery**: Browse and filter venues by location, sport type and available amenities
 - **Real-time Availability**: Live updates of slot availability with automatic refresh
 - **Seamless Booking Flow**: Intuitive three-step booking process with instant confirmation
 - **Responsive Interface**: Optimized for all devices with touch-friendly controls
-- **Venue Details**: Rich venue information including amenities, ratings, and sports offered
+- **Venue Details**: Rich venue information including amenities, ratings and sports offered
 - **Instant Notifications**: Booking confirmations and status updates via toast messages
 
 ## Technical Architecture
@@ -89,7 +88,7 @@ json-server --watch db.json --port 5000
 - `POST /bookings` → Create a new booking
 - `PATCH /slots/:id` → Mark slot as booked
 
-## Usage Guide
+## Usage Guide steps 
 
 1. **Select a Venue**: Choose from the dropdown list of available sports venues
 2. **Pick a Date**: Use the date picker to select your preferred booking date
@@ -143,25 +142,75 @@ json-server --watch db.json --port 5000
 ## Development Guide
 
 ### Project Structure
+
+```plaintext
+sportomic-slot-reserve/
+├── src/                    # Source code directory
+│   ├── components/         # React components
+│   │   ├── ui/            # Reusable UI components
+│   │   │   ├── Button/    # Button components and variants
+│   │   │   ├── Input/     # Form input components
+│   │   │   ├── Select/    # Dropdown components
+│   │   │   └── Card/      # Card layout components
+│   │   ├── layout/        # Layout components
+│   │   │   ├── Header/    # Application header
+│   │   │   └── Footer/    # Application footer
+│   │   ├── VenueSelector/ # Venue selection component
+│   │   ├── SlotList/      # Time slot display component
+│   │   └── BookingForm/   # Booking form component
+│   ├── pages/             # Page components
+│   │   ├── Home/          # Home page
+│   │   ├── Venues/        # Venue listing page
+│   │   └── Booking/       # Booking page
+│   ├── hooks/             # Custom React hooks
+│   │   ├── useVenues.ts   # Venue data management
+│   │   ├── useSlots.ts    # Slot data management
+│   │   └── useBooking.ts  # Booking logic
+│   ├── services/          # API and external services
+│   │   ├── api/           # API client setup
+│   │   │   ├── client.ts  # Axios instance
+│   │   │   └── routes.ts  # API endpoints
+│   │   └── booking/       # Booking service
+│   ├── types/             # TypeScript type definitions
+│   │   ├── venue.ts       # Venue-related types
+│   │   ├── slot.ts        # Slot-related types
+│   │   └── booking.ts     # Booking-related types
+│   ├── utils/             # Utility functions
+│   │   ├── date.ts        # Date formatting utilities
+│   │   ├── validation.ts  # Form validation helpers
+│   │   └── format.ts      # Data formatting helpers
+│   ├── styles/            # Global styles
+│   │   ├── globals.css    # Global CSS
+│   │   └── themes/        # Theme configurations
+│   └── config/            # App configuration
+│       ├── constants.ts   # App constants
+│       └── env.ts         # Environment variables
+├── public/               # Static assets
+│   ├── images/           # Image assets
+│   ├── icons/            # Icon assets
+│   └── fonts/            # Font files
+├── tests/                # Test files
+│   ├── unit/             # Unit tests
+│   ├── integration/      # Integration tests
+│   └── e2e/              # End-to-end tests
+├── scripts/              # Build and utility scripts
+├── docs/                 # Documentation
+│   ├── api/              # API documentation
+│   └── setup/            # Setup guides
+├── .github/              # GitHub configuration
+│   └── workflows/        # GitHub Actions
+├── db.json              # JSON Server database
+├── package.json         # Project dependencies
+├── tsconfig.json        # TypeScript configuration
+├── vite.config.ts       # Vite configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+├── .env.example         # Example environment variables
+├── .eslintrc.js        # ESLint configuration
+├── .prettierrc         # Prettier configuration
+└── README.md           # Project documentation
 ```
-src/
-├── components/           # React components
-│   ├── ui/              # UI components (buttons, inputs, etc.)
-│   ├── VenueSelector.tsx
-│   ├── DatePicker.tsx
-│   ├── SlotList.tsx
-│   └── BookingForm.tsx
-├── services/            # API services
-│   └── api.ts
-├── types/               # TypeScript type definitions
-│   └── index.ts
-├── pages/               # Page components
-│   └── Index.tsx
-├── lib/                 # Utility functions
-│   └── utils.ts
-db.json                  # JSON Server database
-backend-setup.md         # Backend setup instructions
-```
+
+This structure follows a modular and scalable architecture that separates concerns and makes the codebase maintainable and easy to navigate.
 
 ### Backend Data Structure
 The `db.json` file contains:
@@ -200,10 +249,6 @@ The `db.json` file contains:
 - [ ] Booking history and management
 - [ ] Venue reviews and ratings
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -221,7 +266,3 @@ If you encounter any issues or have questions:
    - Expected behavior
    - Current behavior
    - Environment details
-
----
-
-Developed for Sportomic © 2025
