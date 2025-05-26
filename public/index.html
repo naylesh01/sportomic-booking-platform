@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportomic API Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+        .endpoint-card {
+            transition: all 0.3s ease;
+        }
+        .endpoint-card:hover {
+            transform: translateY(-5px);
+        }
+        .api-method {
+            font-family: monospace;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-purple-600">
+                    Sportomic API Dashboard
+                </span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Access and manage sports venue data through our RESTful API endpoints
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Venues Card -->
+            <div class="endpoint-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Venues</h2>
+                    <p class="text-gray-600 mb-4">Browse and manage available sports venues</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <span class="api-method">GET</span>
+                            <span>/venues</span>
+                        </div>
+                    </div>
+                    <a href="/venues" class="mt-6 block w-full bg-emerald-600 text-white text-center py-2 px-4 rounded-lg hover:bg-emerald-700 transition-colors">
+                        View Venues
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slots Card -->
+            <div class="endpoint-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Time Slots</h2>
+                    <p class="text-gray-600 mb-4">View and manage available time slots</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <span class="api-method">GET</span>
+                            <span>/slots</span>
+                        </div>
+                    </div>
+                    <a href="/slots" class="mt-6 block w-full bg-purple-600 text-white text-center py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                        View Slots
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bookings Card -->
+            <div class="endpoint-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Bookings</h2>
+                    <p class="text-gray-600 mb-4">Manage venue bookings and reservations</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <span class="api-method">GET</span>
+                            <span>/bookings</span>
+                        </div>
+                    </div>
+                    <a href="/bookings" class="mt-6 block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                        View Bookings
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Documentation -->
+        <div class="mt-12 bg-white rounded-xl shadow-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick API Guide</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="space-y-3">
+                    <h3 class="font-medium text-gray-900">Venues Endpoints</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><span class="api-method">GET</span> /venues</li>
+                        <li><span class="api-method">GET</span> /venues/:id</li>
+                    </ul>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="font-medium text-gray-900">Slots Endpoints</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><span class="api-method">GET</span> /slots</li>
+                        <li><span class="api-method">GET</span> /slots?venueId=:id</li>
+                    </ul>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="font-medium text-gray-900">Bookings Endpoints</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><span class="api-method">GET</span> /bookings</li>
+                        <li><span class="api-method">POST</span> /bookings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-600">
+            <p>© 2025 Sportomic API. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

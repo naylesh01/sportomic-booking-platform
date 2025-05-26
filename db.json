@@ -1,0 +1,149 @@
+{
+  "venues": [
+    {
+      "id": "1",
+      "name": "Elite Sports Complex",
+      "location": "123 Park Avenue, Downtown",
+      "sports": [
+        "Tennis",
+        "Badminton",
+        "Squash"
+      ],
+      "amenities": [
+        "Changing Rooms",
+        "Pro Shop",
+        "Parking"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": "2",
+      "name": "Fitness Arena",
+      "location": "45 North Sports Lane",
+      "sports": [
+        "Basketball",
+        "Volleyball",
+        "Table Tennis"
+      ],
+      "amenities": [
+        "Locker Room",
+        "Cafeteria",
+        "First Aid"
+      ],
+      "rating": 4.2
+    },
+    {
+      "id": "3",
+      "name": "Aqua Sports Center",
+      "location": "789 Waterfront Drive, West Zone",
+      "sports": [
+        "Swimming",
+        "Water Polo",
+        "Diving"
+      ],
+      "amenities": [
+        "Olympic Pool",
+        "Steam Room",
+        "Towel Service"
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": "4",
+      "name": "Urban Sports Hub",
+      "location": "56 Central Plaza Avenue",
+      "sports": [
+        "Football",
+        "Cricket",
+        "Hockey"
+      ],
+      "amenities": [
+        "Floodlights",
+        "Equipment Rental",
+        "Sports Shop"
+      ],
+      "rating": 4.3
+    }
+  ],
+  "slots": [
+    {
+      "id": "1-tennis-2025-05-26-09",
+      "venueId": "1",
+      "date": "2025-05-26",
+      "time": "09:00 AM",
+      "sport": "Tennis",
+      "price": 45,
+      "booked": false
+    },
+    {
+      "id": "1-tennis-2025-05-26-10",
+      "venueId": "1",
+      "date": "2025-05-26",
+      "time": "10:00 AM",
+      "sport": "Tennis",
+      "price": 45,
+      "booked": true
+    },
+    {
+      "id": "1-badminton-2025-05-26-09",
+      "venueId": "1",
+      "date": "2025-05-26",
+      "time": "09:00 AM",
+      "sport": "Badminton",
+      "price": 35,
+      "booked": false
+    },
+    {
+      "id": "1-badminton-2025-05-26-11",
+      "venueId": "1",
+      "date": "2025-05-26",
+      "time": "11:00 AM",
+      "sport": "Badminton",
+      "price": 35,
+      "booked": false
+    },
+    {
+      "id": "2-basketball-2025-05-26-14",
+      "venueId": "2",
+      "date": "2025-05-26",
+      "time": "02:00 PM",
+      "sport": "Basketball",
+      "price": 50,
+      "booked": true
+    },
+    {
+      "id": "2-basketball-2025-05-26-15",
+      "venueId": "2",
+      "date": "2025-05-26",
+      "time": "03:00 PM",
+      "sport": "Basketball",
+      "price": 50,
+      "booked": false
+    },
+    {
+      "id": "2-volleyball-2025-05-26-16",
+      "venueId": "2",
+      "date": "2025-05-26",
+      "time": "04:00 PM",
+      "sport": "Volleyball",
+      "price": 40,
+      "booked": false
+    }
+  ],
+  "bookings": [{
+      "id": "example_booking",
+      "userName": "John Doe",
+      "sport": "Tennis",
+      "date": "2025-05-26",
+      "timeSlot": "09:00 AM",
+      "slotId": "1-tennis-2025-05-26-09",
+      "venueId": "1",
+      "createdAt": "2025-05-26T14:00:00.000Z",
+      "status": "confirmed",
+      "paymentStatus": "paid",
+      "specialRequirements": "Need equipment",
+      "contactPhone": "+91 9876543210",
+      "contactEmail": "john@example.com"
+    }
+  ]
+}

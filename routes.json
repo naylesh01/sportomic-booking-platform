@@ -1,0 +1,5 @@
+{
+  "/api/*": "/$1",
+  "/api/venues/:id/slots": "/slots?venueId=:id",
+  "/api/venues/:id/slots?date=:date": "/slots?venueId=:id&date=:date"
+}
